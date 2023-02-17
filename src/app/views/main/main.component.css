@@ -1,0 +1,15 @@
+.heroSection {
+    margin-bottom: 200px;
+}
+
+.btnColor {
+    background-color: #9B317D;
+    color: #eee;
+}
+
+.photo {
+    background-image: url("src/assets/Images/photo1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

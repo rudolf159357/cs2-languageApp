@@ -1,0 +1,14 @@
+<div *ngIf="type == 'type2'; else elseBlock">
+    <div class="mainContent container mb-5">
+        <h2 class="w-50 mb-3" style="color: purple; margin-left: 50%;">{{title}}</h2>
+        <p class="w-50" style="margin-left: 50%;">{{text}}</p>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <div class="mainContent container mb-5" style="background-color: purple; color: #eee">
+        <h2 class="w-50 mb-3">{{title}}</h2>
+        <p class="w-50">{{text}}</p>
+    </div>
+</ng-template>
+
+
