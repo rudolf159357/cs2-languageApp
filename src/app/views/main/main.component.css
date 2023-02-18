@@ -7,6 +7,11 @@
     color: #eee;
 }
 
+.btnColor:hover {
+    background-color: #be2493;
+    color: #fff;
+}
+
 .photo {
     background-image: url("src/assets/Images/photo1.jpg");
     background-repeat: no-repeat;
