@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Word } from 'src/app/models/wordModel';
 
 @Component({
   selector: 'app-table',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
+
+  @Input() data: Word[] = [];
 
   constructor() { }
 
