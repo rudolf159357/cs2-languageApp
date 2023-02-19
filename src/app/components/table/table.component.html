@@ -2,16 +2,18 @@
     <table class="table">
         <thead>
           <tr>
-            <th></th>
             <th scope="col">Word</th>
             <th scope="col">Translation</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody >
           <tr *ngFor="let obj of data">
-            <td></td>
             <td class="text-lowercase">{{obj.word}}</td>
             <td class="text-lowercase">{{obj.translation}}</td>
+            <td class="delete">delete</td>
+            <td class="update">update</td>
           </tr>
         </tbody>
       </table>
