@@ -24,6 +24,11 @@ export class EnglishComponent implements OnInit {
   }
 
   submitForm(value: Word){
-    console.log(value);
+    this.service.createEnglishData(value).subscribe({next: (res) => {
+      console.log(res)
+    }, 
+    error: (err) => {
+      console.log(err)
+    }});
   }
 }

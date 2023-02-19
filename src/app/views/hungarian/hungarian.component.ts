@@ -24,7 +24,12 @@ export class HungarianComponent implements OnInit {
   }
 
   submitForm(value: Word){
-    console.log(value);
+    this.service.createHungarianData(value).subscribe({next: (res) => {
+      console.log(res);
+    },
+    error: (err) => {
+      console.log(err)
+    }});
   }
 
 }

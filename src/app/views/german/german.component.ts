@@ -24,7 +24,12 @@ export class GermanComponent implements OnInit {
   }
 
   submitForm(value: Word){
-    console.log(value);
+    this.service.createGermanData(value).subscribe({next: (res) => {
+      console.log(res);
+    },
+      error: (err) => {
+        console.log(err);
+      }});
   }
 
 }
