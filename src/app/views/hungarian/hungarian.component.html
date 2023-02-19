@@ -1,5 +1,5 @@
 <div class="content container">
-    <app-form title="Hungarian"></app-form>
+    <app-form title="Hungarian" (submitLangForm)="submitForm($event)"></app-form>
 
     <app-table [data]="langData"></app-table>
 </div>

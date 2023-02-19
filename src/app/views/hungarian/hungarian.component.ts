@@ -23,4 +23,8 @@ export class HungarianComponent implements OnInit {
     }});
   }
 
+  submitForm(value: Word){
+    console.log(value);
+  }
+
 }

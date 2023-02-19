@@ -23,4 +23,8 @@ export class GermanComponent implements OnInit {
     }});
   }
 
+  submitForm(value: Word){
+    console.log(value);
+  }
+
 }
