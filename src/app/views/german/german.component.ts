@@ -32,4 +32,7 @@ export class GermanComponent implements OnInit {
       }});
   }
 
+  deleteWord(id: number){
+    console.log(id);
+  }
 }

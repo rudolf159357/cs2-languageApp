@@ -31,4 +31,9 @@ export class EnglishComponent implements OnInit {
       console.log(err)
     }});
   }
+
+
+  deleteWord(id: number){
+    console.log(id);
+  }
 }

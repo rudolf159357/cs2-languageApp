@@ -1,7 +1,12 @@
-.update {
+.update button{
     color: #319B4F;
+    border: none;
+    background-color: transparent;
 }
 
-.delete {
+
+.delete button {
+    border: none;
     color: #9B3148;
+    background-color: transparent;
 }

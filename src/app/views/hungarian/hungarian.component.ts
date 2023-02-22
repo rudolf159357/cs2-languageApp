@@ -32,4 +32,8 @@ export class HungarianComponent implements OnInit {
     }});
   }
 
+  deleteWord(id: number){
+    console.log(id);
+  }
+
 }
