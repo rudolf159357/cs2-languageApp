@@ -26,6 +26,7 @@ export class GermanComponent implements OnInit {
   submitForm(value: Word){
     this.service.createGermanData(value).subscribe({next: (res) => {
       console.log(res);
+      this.langData.push(res);
     },
       error: (err) => {
         console.log(err);
@@ -35,7 +36,8 @@ export class GermanComponent implements OnInit {
   deleteWord(value: Word){
     //console.log(value);
     this.service.deleteGermanData(value).subscribe({next: (res) => {
-      console.log(res);
+      //console.log(res);
+      this.langData = this.langData.filter(word => word.id != res.id);
     },
     error: (err) => {
       console.log(err);

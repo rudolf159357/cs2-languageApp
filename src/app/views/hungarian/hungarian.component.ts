@@ -26,6 +26,7 @@ export class HungarianComponent implements OnInit {
   submitForm(value: Word){
     this.service.createHungarianData(value).subscribe({next: (res) => {
       console.log(res);
+      this.langData.push(res);
     },
     error: (err) => {
       console.log(err)
@@ -33,7 +34,13 @@ export class HungarianComponent implements OnInit {
   }
 
   deleteWord(value: Word){
-    console.log(value);
+    this.service.deleteHungarianData(value).subscribe({next: (res) => {
+      //console.log(res);
+      this.langData = this.langData.filter(value => value.id != res.id);
+    },
+    error: (err) => {
+      console.log(err);
+    }});
   }
 
 }
