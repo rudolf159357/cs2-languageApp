@@ -32,7 +32,13 @@ export class GermanComponent implements OnInit {
       }});
   }
 
-  deleteWord(id: number){
-    console.log(id);
+  deleteWord(value: Word){
+    //console.log(value);
+    this.service.deleteGermanData(value).subscribe({next: (res) => {
+      console.log(res);
+    },
+    error: (err) => {
+      console.log(err);
+    }})
   }
 }

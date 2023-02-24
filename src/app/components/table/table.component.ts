@@ -10,15 +10,15 @@ export class TableComponent implements OnInit {
 
   @Input() data: Word[] = [];
 
-  @Output() deleteWord: EventEmitter<number> = new EventEmitter(); 
+  @Output() deleteWord: EventEmitter<Word> = new EventEmitter(); 
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  delete(id: number){
+  delete(value: Word){
     //console.log(id);
-    this.deleteWord.emit(id);
+    this.deleteWord.emit(value);
   }
 }

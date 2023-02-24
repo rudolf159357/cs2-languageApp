@@ -12,7 +12,7 @@
           <tr *ngFor="let obj of data">
             <td class="text-lowercase">{{obj.word}}</td>
             <td class="text-lowercase">{{obj.translation}}</td>
-            <td class="delete"><button (click)="delete(obj.id)">delete</button></td>
+            <td class="delete"><button (click)="delete(obj)">delete</button></td>
             <td class="update"><button>update</button></td>
           </tr>
         </tbody>

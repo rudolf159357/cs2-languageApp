@@ -22,6 +22,12 @@ export class GetDataService {
     return this.http.post<Word>(environment.testUrl + "api/create_german_data", data);
   }
 
+  // DELETE
+  deleteGermanData(value: Word): Observable<Word> {
+    const url = `${environment.testUrl}api/delete_german_data/${value.id}`
+    return this.http.delete<Word>(url);
+  }
+
   // GET
   getHungarianData(): Observable<Word[]>{
     return this.http.get<Word[]>(environment.testUrl + "api/hungarian")

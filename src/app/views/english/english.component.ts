@@ -33,7 +33,7 @@ export class EnglishComponent implements OnInit {
   }
 
 
-  deleteWord(id: number){
-    console.log(id);
+  deleteWord(value: Word){
+    console.log(value);
   }
 }
