@@ -1,9 +1,10 @@
 <div class="d-flex">
   <!-- form -->
   <div class="w-100 ">
-    <h1 class="mb-5">{{title}}</h1>
-
-      <div class="mb-5">
+    <h1 class="mb-4">{{title}}</h1>
+    <div *ngIf="error; else elseBlock" class="alert alert-danger w-50" role="alert">Signs and numbers are not allowed</div>
+    <ng-template #elseBlock><div></div></ng-template>
+      <div class="mb-5 mt-3">
           <form class="w-50">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Foreign word</label>
