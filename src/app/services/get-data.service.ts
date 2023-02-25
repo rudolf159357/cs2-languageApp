@@ -28,6 +28,11 @@ export class GetDataService {
     return this.http.delete<Word>(url);
   }
 
+  // UPDATE
+  updateGermanData(value: Word): Observable<Word> {
+    return this.http.put<Word>(environment.testUrl + "api/update_german_data", value);
+  }
+
   // GET
   getHungarianData(): Observable<Word[]>{
     return this.http.get<Word[]>(environment.testUrl + "api/hungarian")
