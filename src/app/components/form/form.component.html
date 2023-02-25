@@ -1,17 +1,27 @@
-<h1 class="mb-5">{{title}}</h1>
+<div class="d-flex">
+  <!-- form -->
+  <div class="w-100 ">
+    <h1 class="mb-5">{{title}}</h1>
 
-<div class="mb-5">
-    <form class="w-50">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Foreign word</label>
-          <input type="text" class="form-control" id="foreignWord" name="foreignWord" [(ngModel)]="inputValues.word">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Translation</label>
-          <input type="text" class="form-control" id="translationWord" name="translationWord" [(ngModel)]="inputValues.translation">
-        </div>
-        <button type="submit" class="btn mt-3" (click)="submitForm()">Submit</button>
-    </form>
+      <div class="mb-5">
+          <form class="w-50">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Foreign word</label>
+                <input type="text" class="form-control" id="foreignWord" name="foreignWord" [(ngModel)]="inputValues.word">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Translation</label>
+                <input type="text" class="form-control" id="translationWord" name="translationWord" [(ngModel)]="inputValues.translation">
+              </div>
+              <button type="submit" class="btn mt-3" (click)="submitForm()">Submit</button>
+          </form>
+      </div>
+  </div> <!-- end of form -->
+  <!-- right side button -->
+  <div class=" pt-2">
+    <button class="btn"><a [routerLink]="backButtonUrl">Back</a></button>
+  </div>
 </div>
+
 
 

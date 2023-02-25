@@ -9,6 +9,7 @@ import { Word } from 'src/app/models/wordModel';
 export class FormComponent implements OnInit {
 
   @Input() title: string = "Language";
+  @Input() backButtonUrl: string = "/languages";
 
   @Output() submitLangForm: EventEmitter<Word> = new EventEmitter();
   

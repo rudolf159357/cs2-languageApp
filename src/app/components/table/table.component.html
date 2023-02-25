@@ -13,7 +13,7 @@
             <td class="text-lowercase">{{obj.word}}</td>
             <td class="text-lowercase">{{obj.translation}}</td>
             <td class="delete"><button (click)="delete(obj)">delete</button></td>
-            <td class="update"><button>update</button></td>
+            <td class="update"><a [routerLink]="['update/', obj.id]">update</a></td>
           </tr>
         </tbody>
       </table>

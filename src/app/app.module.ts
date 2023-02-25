@@ -15,6 +15,9 @@ import { HungarianComponent } from './views/hungarian/hungarian.component';
 import { EnglishComponent } from './views/english/english.component';
 import { FormComponent } from './components/form/form.component';
 import { TableComponent } from './components/table/table.component';
+import { GermanUpdateComponent } from './views/update-view/german-update/german-update.component';
+import { HungarianUpdateComponent } from './views/update-view/hungarian-update/hungarian-update.component';
+import { EnglishUpdateComponent } from './views/update-view/english-update/english-update.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { TableComponent } from './components/table/table.component';
     HungarianComponent,
     EnglishComponent,
     FormComponent,
-    TableComponent
+    TableComponent,
+    GermanUpdateComponent,
+    HungarianUpdateComponent,
+    EnglishUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -7,3 +7,8 @@ button:hover {
     background-color: #be2493;
     color: #fff;
 }
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}

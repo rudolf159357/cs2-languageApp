@@ -1,6 +1,7 @@
-.update button{
+.update a{
     color: #319B4F;
     border: none;
+    text-decoration: none;
     background-color: transparent;
 }
 
