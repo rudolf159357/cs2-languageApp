@@ -16,7 +16,7 @@ export class GermanUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.idValue = params['id']
+      this.idValue = params['id'];
       //console.log(this.idValue);
     });
   }

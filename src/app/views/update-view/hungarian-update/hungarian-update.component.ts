@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Word } from 'src/app/models/wordModel';
+import { GetDataService } from 'src/app/services/get-data.service';
 
 @Component({
   selector: 'app-hungarian-update',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HungarianUpdateComponent implements OnInit {
 
-  constructor() { }
+  idValue: string = "";
+
+  constructor(private route: ActivatedRoute, private service: GetDataService) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.idValue = params['id'];
+    });
+
   }
 
+  updateHungarian(value: Word){
+    value.id = Number(this.idValue);
+    //console.log(values);
+    this.service.updateHungarianData(value).subscribe({next: (res) => {
+      console.log(res);
+    },
+    error: (err) => {
+      console.log(err)
+    }});
+  }
+ 
 }

@@ -49,6 +49,11 @@ export class GetDataService {
     return this.http.delete<Word>(url);
   }
 
+  // UPDATE
+  updateHungarianData(value: Word): Observable<Word> {
+    return this.http.put<Word>(environment.testUrl + "api/update_hungarian_data", value);
+  }
+
   // GET
   getEnglishData(): Observable<Word[]>{
     return this.http.get<Word[]>(environment.testUrl + "api/english")
@@ -63,6 +68,11 @@ export class GetDataService {
    deleteEnglishData(value: Word): Observable<Word> {
     const url = `${environment.testUrl}api/delete_english_data/${value.id}`
     return this.http.delete<Word>(url);
+  }
+
+  // UPDATE
+  updateEnglishData(value: Word): Observable<Word> {
+    return this.http.put<Word>(environment.testUrl + "api/update_english_data", value);
   }
 
 }
